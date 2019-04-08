@@ -55,23 +55,26 @@ GrayJay.Publish('topic')
  
 
 // 中介者的高级实现
-(function (root){
-    function guidGenerator() {}
+function guidGenerator() {
+    var uid = -1
+    return (function (){
+        return ++uid
+    })()
+}
 
-    // 订阅者构造函数
-    function Subscriber(fn, options, context) {
-        if(!this instanceof Subscriber) {
-            return new Subscriber(fn, options, context)
-        } else {
-            // guidGenerator()是一个函数，用于为订阅者生成GUID，以后很方便的引用他们，
-            this.id = guidGenerator()
-            this.fn = fn
-            this.options = options
-            this.context = context
-            this.topic = null
-        }
+// 订阅者构造函数
+function Subscriber(fn, options, context) {
+    if(!this instanceof Subscriber) {
+        return new Subscriber(fn, options, context)
+    } else {
+        // guidGenerator()是一个函数，用于为订阅者生成GUID，以后很方便的引用他们，
+        this.id = guidGenerator()
+        this.fn = fn
+        this.options = options
+        this.context = context
+        this.topic = null
     }
-})()
+}
 
 
 // 
@@ -218,6 +221,17 @@ Mediator.prototype = {
     },
     remove: function (topicName, identifier) {
         this.GetTopic(topicName).RemoveSubscriber(identifier);
+    },
+    Publish: function (topicName) {
+        var args = Array.prototype.slice.call(arguments, 1)
+            topic = this.GetTopic(topicName)
+        args.push(topic)
+        // 获得相应的主体，在进行发布
+        this.GetTopic(topicName).Publish(args)
     }
 }
 
+window.Mediator =new Mediator()
+Mediator.Topic =new Topic()
+Mediator.Subscriber =new Subscriber()
+console.log(Mediator)

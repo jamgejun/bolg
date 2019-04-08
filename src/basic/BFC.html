@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>块级格式上下文</title>
+    <style>
+        section {
+            width: 200px;
+            display: table-cell;
+            border: 1px solid #cccccc
+        }
+        section>div{
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="float:left">float 元素不会和bfc重叠</div>
+    <section>
+        <div>2</div>
+        <span>1</span><span>2</span>
+        <div>1</div>
+    </section>
+</body>
+</html>

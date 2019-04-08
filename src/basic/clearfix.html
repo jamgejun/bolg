@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>清除浮动</title>
+
+    <style>
+        .demo1 {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            background: #ccc;
+        }
+        .demo1>div {
+            float: right;
+            border: 1px solid red;
+        }
+
+        .demo2 {
+            width: 200px;
+            background: #ccc;
+        }
+
+        .demo3 {
+            width: 200px;
+            margin-top: 20px;
+            background: #ccc;
+            zoom: 1;
+        }
+        .demo3::after{
+            display: block;
+            content: '';
+            clear:both;
+            visibility: hidden;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="demo1">
+        <div>第一种：通过父级设置高度</div>
+    </section>
+
+    <section class="demo2">
+        <div style="float:left">末尾添加div空元素</div>
+        <div style="float:right">末尾添加div空元素</div>
+        <div style="clear:both"></div>
+    </section>
+
+    <section class="demo3">
+        <div style="float:left">添加伪元素::after</div>
+        <div style="float:right">使用zoom:1触发ie的layout，兼容ie6，7</div>
+    </section>
+</body>
+</html>

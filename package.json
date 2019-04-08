@@ -1,0 +1,26 @@
+{
+  "name": "bolg",
+  "version": "1.0.0",
+  "description": "this my study online\r 作为前端小白，进行学习记录成长的地方。",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^4.29.6"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./build/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamgejun/bolg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamgejun/bolg/issues"
+  },
+  "homepage": "https://github.com/jamgejun/bolg#readme"
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>居中方式</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+        }
+        .demo1 {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto
+        }
+
+        .demo2 {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background: #cccccc
+        }
+        .demo2>div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: greenyellow;
+            top:50%;
+            left:50%;
+            margin: -100px 0 0 -100px;
+            line-height: 200px;
+        }
+
+        .demo3 {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            background: #656565;
+            position: relative;
+        }
+        .demo3>div {
+            width: 200px;
+            height: 200px;
+            background: #656458;
+            line-height: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .demo4 {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            background: #555555;
+            position: relative;
+        }
+        .demo4>div {
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%)
+        }
+
+        .demo5 {
+            width: 600px;
+            height: 600px;
+            display: table-cell;
+            vertical-align: middle;
+            background: #666;
+        }
+        .demo5>div {
+            width:200px;
+            height: 200px;
+            background: #ddd;
+            margin: 0 auto;
+        }
+
+        .demo6 {
+            width: 600px;
+            height: 600px;
+            display: flex;
+            vertical-align: middle;
+            justify-content: center;
+            align-items: center;
+            background: #777777;
+        }
+        .demo6>div {
+            width: 200px;
+            height: 200px;
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo1">
+        常见的水平居中(使用margin:0 auto)
+    </div>
+
+    <div class="demo2">
+        <div>已知高度,垂直水平居中</div>
+    </div>
+
+    <div class="demo3">
+        <div>未知高度，垂直水平居中</div>
+    </div>
+
+    <div class="demo4">
+        <div>绝对定位，使用translate</div>
+    </div>
+
+    <div class="demo5">
+        <div>使用table-cell居中</div>
+    </div>
+
+    <div class="demo6">
+        <div>使用flex居中</div>
+    </div>
+</body>
+</html>
