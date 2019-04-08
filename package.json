@@ -4,14 +4,24 @@
   "description": "this my study online\r 作为前端小白，进行学习记录成长的地方。",
   "main": "index.js",
   "dependencies": {
+    "vue": "^2.6.10",
+    "vue-loader": "^15.7.0",
     "webpack": "^4.29.6"
   },
   "devDependencies": {
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "vue-template-compiler": "^2.6.10",
     "webpack-cli": "^3.3.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./build/webpack.config.js"
+    "build": "webpack --config ./build/webpack.config.js",
+    "dev": "webpack --config ./build/webpack.config.js"
   },
   "repository": {
     "type": "git",
