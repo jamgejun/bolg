@@ -1,0 +1,15 @@
+{
+    "presets": ["@babel/preset-env"],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "absoluteRuntime": false,
+                "corejs": false,
+                "helpers": true,
+                "regenerator": true, // 开启async函数和generator函数功能，需要配合babel/runtime插件
+                "useESModules": false
+            }
+        ]
+    ]
+}
