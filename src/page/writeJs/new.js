@@ -6,18 +6,32 @@ this指向该对象。
 如果函数没有返回值，则返回该对象的引用
 **/
 
+/**
+ * 
+ * @param {*} func 
+ */
+
+
 function New(func) {
     var obj = {}
-    if(func.prototype!==null) {
-        obj.__proto__ = func.prototype
+    if(func.prototype !== null) {
+        obj.__proto__ = func.prototype;
     }
 
-    var ret = func.apply(obj, Array.prototype.slice.call(arguments, 1))
-
-    // 如果构造函数有返回值，则将该对象返回给实例对象
-    if((typeof ret === 'object' || typeof ret === 'function') && ret !== null) {
+    var ret = func.apply(obj, Array.prototype.slice.call(arguments, 1)) // 判断本身执行函数的返回值是否存在，如果存在，则返回该值。
+    if(ret) {
         return ret
-    } else {
-        return obj
     }
+    return obj
 }
+
+function testNew(name, age){
+    this.name = name;
+    this.age = age;
+}
+
+var testNewObj = new testNew('Gray', '21')
+var testNewObj2 = New(testNew, 'Gray', '21')
+console.log(testNewObj, testNewObj2)
+
+module.exports = New
