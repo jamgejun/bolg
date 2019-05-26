@@ -6,4 +6,6 @@
 // import './page/writeJs/apply'
 // import './page/writeJs/bind'
 // import './page/writeJs/extend'
-import './page/writeJs/curry'
+// import './page/writeJs/curry'
+import './page/writeJs/promise'
+import './page/writeJs/promiseTet'
