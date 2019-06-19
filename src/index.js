@@ -9,5 +9,8 @@
 // import './page/writeJs/curry'
 // import './page/writeJs/promise'
 // import './page/writeJs/promiseTet'
-import './page/writeJs/debounce'
-import './page/writeJs/throttle'
+// import './page/writeJs/debounce'
+// import './page/writeJs/throttle'
+
+// import './page/sortJs/pop'
+import './page/Desiner/test'
