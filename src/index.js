@@ -13,4 +13,5 @@
 // import './page/writeJs/throttle'
 
 // import './page/sortJs/pop'
-import './page/Desiner/test'
+// import './page/Desiner/test'
+import './page/writeJs/flat'
