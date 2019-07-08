@@ -16,4 +16,7 @@
 // import './page/Desiner/test'
 // import './page/writeJs/flat'
 // import './page/writeJs/Vue.use'
-import './page/writeJs/blob'
+// import './page/writeJs/blob'
+// import './page/DataStruct/singleListNode'
+import './page/DataStruct/doubleListNode'
+import './page/DataStruct/bst'

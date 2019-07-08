@@ -40,6 +40,7 @@ console.log(url)
 
 const upload = document.querySelector('#upload')
 const pre = document.querySelector('#preview')
+pre.style.width = '400px'
 
 upload.onchange = function (){
     const file = upload.files[0]
