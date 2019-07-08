@@ -15,4 +15,5 @@
 // import './page/sortJs/pop'
 // import './page/Desiner/test'
 // import './page/writeJs/flat'
-import './page/writeJs/Vue.use'
+// import './page/writeJs/Vue.use'
+import './page/writeJs/blob'

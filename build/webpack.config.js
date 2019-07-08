@@ -55,7 +55,9 @@ module.exports = {
         new VueLoaderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/index.html')
+        })
     ],
     devServer: {
         port: 8080,
