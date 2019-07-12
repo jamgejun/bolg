@@ -1,7 +1,7 @@
 var newObj = JSON.parse(JSON.stringify(oldObj))
 
 function deepCopy(obj) {
-    var result = undefined;
+    var result = {};
     if (typeof obj === 'object') {
         for(var i in obj) {
             if (typeof obj[i] === 'object') {
