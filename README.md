@@ -64,3 +64,16 @@
      - 其中第二篇文章巩固复习，涉及到的知识包括了原型链闭包，高级函数编程等
 
 - 将会记录一篇博客，关于blob对象，FileReader对象的一些相关知识。
+
+## 7.13 
+
+- 掘金文档三篇
+
+- leetcode编程题，螺旋矩阵
+
+- 遇到一个有意思的三目运算
+```
+    !(node.left) ? node.left = newNode : this.insertNode(node.left, newNode)
+    node.left = !(node.left) == null ? newNode : this.insertNode(node.left, newNode)
+```
+区别在于，this.insertNode函数的返回值问题，虽然是使用的递归，但是，this.insertNode没有返回值。node.left只能是undefined
