@@ -77,3 +77,15 @@
     node.left = !(node.left) == null ? newNode : this.insertNode(node.left, newNode)
 ```
 区别在于，this.insertNode函数的返回值问题，虽然是使用的递归，但是，this.insertNode没有返回值。node.left只能是undefined
+
+## 7.14
+
+- 算法的分类
+  穷举法（暴力破解） 贪心算法（局部最优解） 动态规划（通过将局部最优解比较或者组合，实现最优解） 分治算法（二分查找，快速排序）
+
+- leetcode编程题 回文数II（详情见issue）
+  有穷举法，分治算法的思想
+
+- 掘金文档 关于使用css实现天气的小log
+  关键点：**after和before伪元素**的使用+**cli-path**+多重**box-shadow**+**@keyframe**属性。
+  通过定位的伪装，加上css3动画。
