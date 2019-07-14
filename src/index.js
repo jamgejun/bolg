@@ -19,5 +19,7 @@
 // import './page/writeJs/blob'
 // import './page/DataStruct/singleListNode'
 // import './page/DataStruct/doubleListNode'
-import './page/DataStruct/bst'
+// import './page/DataStruct/bst'
 // import './page/interview/cors'
+
+import './page/algorithm/defaultThink/fabonacci'
