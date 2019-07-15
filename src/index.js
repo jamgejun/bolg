@@ -22,4 +22,5 @@
 // import './page/DataStruct/bst'
 // import './page/interview/cors'
 
-import './page/algorithm/defaultThink/fabonacci'
+// import './page/algorithm/defaultThink/fabonacci'
+import './page/writeJs/test'
