@@ -24,3 +24,5 @@
 
 // import './page/algorithm/defaultThink/fabonacci'
 import './page/writeJs/test'
+// import './page/DataStruct/bst'
+// import './page/algorithm/sort/insertSort'

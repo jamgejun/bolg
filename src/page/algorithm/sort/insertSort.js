@@ -14,3 +14,4 @@ function insertSort(arr) {
     }
     return arr
 }
+console.log(insertSort([5,1,2,6,3,4]))

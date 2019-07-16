@@ -50,6 +50,23 @@ class BST {
        }
        return `not find data`
     }
+    reverse() {
+        if(!this.root) {
+            throw(`tree is empty！`)
+        } else {
+            this.reverseNode(this.root)
+        }
+    }
+    reverseNode(root) {
+        if(!root) {
+            return 
+        }
+        let preLeft = root.left
+        root.left = root.right
+        root.right = preLeft
+        this.reverseNode(root.left)
+        this.reverseNode(root.right)
+    }
     midPrint(root) {
         if(!this.root) {
             return `tree is empty`
@@ -87,3 +104,5 @@ console.log(bst.findNode(3))
 bst.midPrint(bst.root)
 bst.firstPrint(bst.root)
 bst.lastPrnit(bst.root)
+bst.reverse()
+console.log(bst)

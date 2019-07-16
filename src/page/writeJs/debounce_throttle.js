@@ -2,7 +2,6 @@ function cut(fn, wait, flag) {
     let timer;
     let lastcall = new Date();
     return function (){
-
         if(flag) {
             if(timer) clearTimeout(timer)
             timer = setTimeout(() => {

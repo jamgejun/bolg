@@ -249,3 +249,39 @@ myPromise.prototype.then = function (fullfilled, rejected) {
         rejected(this.reason)
     }
 }
+
+function getTimes(str) {
+    let arr = [...str]
+    let obj = {}
+    for(var i = 0; i<arr.length; i++) {
+        if(obj[arr[i]]) {
+            obj[arr[i]]++
+        } else {
+            obj[arr[i]] = 1
+        }
+    }
+    let answer = []
+    for(var i in obj) {
+        var obj1 = {}
+        obj1[i] = obj[i]
+        answer.push(obj1)
+    }
+    return answer
+}
+
+function getTimesMap(str) {
+    let arr = [...str]
+    let answer = new Map()
+    for(var i = 0; i<arr.length; i++) {
+        if(answer.get(arr[i])) {
+            let conut = answer.get(arr[i])
+            conut++
+            answer.set(arr[i], conut)
+        } else {
+            answer.set(arr[i], 1)
+        }
+    }
+    return [...answer]
+}
+console.log(getTimes('abcsbaaa'))
+console.log(getTimesMap('abcsbaaa'))
