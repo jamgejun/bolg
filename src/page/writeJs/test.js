@@ -285,3 +285,20 @@ function getTimesMap(str) {
 }
 console.log(getTimes('abcsbaaa'))
 console.log(getTimesMap('abcsbaaa'))
+
+var obj = {
+    name:'GrayJay'
+}
+var bValue;
+Object.defineProperty(obj,'name', {
+    get: function (){
+        console.log('get')
+        return bValue
+    },
+    set: function (value){
+        bValue = value
+        console.log('set')
+    }
+})
+obj.name = 'Miny'
+console.log(obj.name)

@@ -15,3 +15,4 @@ function quickSort(array) {
     }
     return quickSort(left).concat([pivot], quickSort(right))
 }
+

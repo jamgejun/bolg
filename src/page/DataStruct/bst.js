@@ -94,7 +94,7 @@ class BST {
 }
 
 const bst = new BST()
-let array = [5,6,1,2,3,8,4]
+let array = [5,6,1,2,3,8,7,4]
 array.map((item) => {
     bst.insert(item)
 })
@@ -106,3 +106,32 @@ bst.firstPrint(bst.root)
 bst.lastPrnit(bst.root)
 bst.reverse()
 console.log(bst)
+
+// var sumNumbers = function(root) {
+//     debugger;
+//     let stack = []
+//     let answer = []
+//     let Root = root.root
+//     stack.push(Root)
+//     while(stack.length) {
+//         let nowNode = stack[stack.length-1]
+//         if(nowNode.left) {
+//             stack.push(nowNode.left)
+//             continue;
+//         }
+//         if(nowNode.right) {
+//             stack.push(nowNode.right)
+//             continue;
+//         } else {
+//             let count = stack.toString().replace(',', '')
+//             stack.pop()
+//             answer.push(count)
+//         }
+//     }
+//     return answer.reduce((last, next) => {
+//         return last+next
+//     })
+// };
+
+
+// console.log(sumNumbers(bst))
